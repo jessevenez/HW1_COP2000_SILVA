@@ -1,0 +1,42 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int main()
+{
+	int const  RECIPE_NUMBER = 6;
+	// make const names upper case (ex: recipe_flour -> RECIPE_FLOUR)
+	float const recipe_flour = 15.0;//cups for 6 pies
+	float const recipe_sugar = 8.0;//tablespoons  for 6 pies
+	float const recipe_salt = 3.0;//tablespoons for 6 pies
+	float const recipe_butter = 5.25;//cups  for 6 pies
+	float const recipe_eggs = 6.00;//eggs  for 6 pies
+
+	int total_pies_requested = 0;
+	float total_flour = 0;
+	float total_sugar = 0;
+	float total_salt = 0;
+	float total_butter = 0;
+	float total_eggs = 0;
+
+	cout << "How many pies do you wish to make?\n";
+	cin >> total_pies_requested;
+
+	// calculation will look like this:
+	// total_something = (recipe_something * total_pies_requested;
+	// repeat line above for each ingredient
+
+
+	total_flour = (recipe_flour / RECIPE_NUMBER)*total_pies_requested;
+	total_sugar = (recipe_sugar / RECIPE_NUMBER)*total_pies_requested;
+	total_salt = (recipe_salt / RECIPE_NUMBER)*total_pies_requested;
+	total_butter = (recipe_butter / RECIPE_NUMBER)*total_pies_requested;
+	total_eggs = (recipe_eggs / RECIPE_NUMBER)*total_pies_requested;
+
+	cout << "Cups of flour: " << total_flour << endl;
+	cout << "Tablespoons of sugar: " << total_sugar << endl;
+	cout << "Tablespoons of salt: " << total_salt << endl;
+	cout << "Cups of butter: " << total_butter << endl;
+	cout << "Number of eggs: " << total_eggs << endl;
+	return 0;
+}
